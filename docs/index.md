@@ -1,6 +1,9 @@
-## super awesome
+## BitNanners Landing Page
 
-[hello](https://www.google.com/s=pretty)
+hey, its a thing, get over it...
 
-[jump to page 2](two.html)
+### Team Resources
+
+[jump to resources page](two.html)
+^ place links to docs or assets here ^
 
