@@ -292,13 +292,14 @@ public class Progress : MonoBehaviour {
                 LOZ.SetTrigger("Next");
                 break;
             case 39:
+                LOZ.SetTrigger("Next");
                 music.StopSound(0);
                 Chest.SetTrigger("Next");
                 music.PlaySound(1);
                 Invoke("ChestWait", ChestOpen.length);
                 break;
             case 40:
-                LOZ.SetTrigger("Next");
+                //Promo.SetTrigger("Next2");
                 break;
         }
         Action += 1;
@@ -306,7 +307,7 @@ public class Progress : MonoBehaviour {
 
     void ChestWait()
     {
-        Promo.SetTrigger("Next");
+        Promo.SetTrigger("Next2");
     }
 
     void deerSplosion()
