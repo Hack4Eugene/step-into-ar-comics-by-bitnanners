@@ -49,14 +49,21 @@ public class Progress : MonoBehaviour {
 
     public GameObject Explosion;
 
-    // Use this for initialization
-    void Start () {
-		
-	}
+    public AnimationClip ChestOpen;
+    public Animator Promo;
+
+    public Animator LOZ;
+
+    public bool Test = false;
 
     // Update is called once per frame
     void Update()
     {
+        if (Test)
+        {
+            Test = false;
+            Promo.SetTrigger("Next");
+        }
         if (Input.GetMouseButtonDown(0))
         {
             RaycastHit hit;
@@ -267,17 +274,39 @@ public class Progress : MonoBehaviour {
                 Debug.Log("4");
                 break;
             case 33:
+                LOZ.SetTrigger("Next");
+                break;
+            case 34:
+                LOZ.SetTrigger("Next");
+                break;
+            case 35:
+                LOZ.SetTrigger("Next");
+                break;
+            case 36:
+                LOZ.SetTrigger("Next");
+                break;
+            case 37:
+                LOZ.SetTrigger("Next");
+                break;
+            case 38:
+                LOZ.SetTrigger("Next");
+                break;
+            case 39:
+                music.StopSound(0);
                 Chest.SetTrigger("Next");
                 music.PlaySound(1);
+                Invoke("ChestWait", ChestOpen.length);
                 break;
-                /*case 4://go to end?
-                    Scene5.SetActive(false);
-                    Background5.SetActive(false);
-                    //end?
-                    Debug.Log("5");
-                    break;*/
+            case 40:
+                LOZ.SetTrigger("Next");
+                break;
         }
         Action += 1;
+    }
+
+    void ChestWait()
+    {
+        Promo.SetTrigger("Next");
     }
 
     void deerSplosion()
