@@ -203,15 +203,15 @@ public class Progress : MonoBehaviour {
             case 17:
                 DeerTalk.SetTrigger("Next");
                 break;
-            case 18:
-                DeerTalk.SetTrigger("Next");
-                break;
-            case 19://change to frogger
+            case 18://change to frogger
                 Scene3.SetActive(false);
                 Background3.SetActive(false);
                 Scene4.SetActive(true);
                 Background4.SetActive(true);
                 Debug.Log("3");
+                break;
+            case 19:
+                Frogger.SetTrigger("Next");
                 break;
             case 20:
                 Frogger.SetTrigger("Next");
@@ -229,9 +229,6 @@ public class Progress : MonoBehaviour {
                 Frogger.SetTrigger("Next");
                 break;
             case 25:
-                Frogger.SetTrigger("Next");
-                break;
-            case 26:
                 Frogger.SetTrigger("Next");//going across
                 break;
                 /*case 3://legend of zelda
