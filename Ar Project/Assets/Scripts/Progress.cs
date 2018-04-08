@@ -33,7 +33,10 @@ public class Progress : MonoBehaviour {
     private bool galaga = false;
     private bool galagaUp = false;
     private bool galagaDown = false;
-    public bool galagaHit = false;
+    private bool galagaHit = false;
+
+    public Animator RocketBeaver;
+    public Animator Mario;
 
     // Use this for initialization
     void Start () {
@@ -125,49 +128,60 @@ public class Progress : MonoBehaviour {
     {
         switch (Action)
         {
-            case 0://change to galaga
-                //NextButton.SetActive(false);
+            /*case 0:
+                Scene2.SetActive(true);
+                Background2.SetActive(true);
+                break;
+            case 1://change to galaga
                 Scene.SetActive(false);
                 Background.SetActive(false);
                 Scene2.SetActive(true);
                 Background2.SetActive(true);
                 //galaga = true;
                 Debug.Log("1");
-                break;
+                break;*/
             case 1:
-                //animator.SetTrigger("Die");
+                RocketBeaver.SetTrigger("Next");
                 break;
-            /*case 1://change to mario
-                NextButton.SetActive(false);
+            case 2:
+                RocketBeaver.SetTrigger("Next");
+                break;
+            case 3:
+                RocketBeaver.SetTrigger("Next");
+                break;
+            case 4:
+                RocketBeaver.SetTrigger("Next");
+                break;
+            case 5://change to mario
                 Scene2.SetActive(false);
                 Background2.SetActive(false);
                 Scene3.SetActive(true);
                 Background3.SetActive(true);
                 Debug.Log("2");
                 break;
-            case 2://change to legend of zelda
-                NextButton.SetActive(false);
+            case 6:
+                Mario.SetTrigger("Next");
+                break;
+            case 9://change to legend of zelda
                 Scene3.SetActive(false);
                 Background3.SetActive(false);
                 Scene4.SetActive(true);
                 Background4.SetActive(true);
                 Debug.Log("3");
                 break;
-            case 3://change to frogger
-                NextButton.SetActive(false);
-                Scene4.SetActive(false);
-                Background4.SetActive(false);
-                Scene5.SetActive(true);
-                Background5.SetActive(true);
-                Debug.Log("4");
-                break;
-            case 4://go to end?
-                NextButton.SetActive(false);
-                Scene5.SetActive(false);
-                Background5.SetActive(false);
-                //end?
-                Debug.Log("5");
-                break;*/
+                /*case 3://change to frogger
+                    Scene4.SetActive(false);
+                    Background4.SetActive(false);
+                    Scene5.SetActive(true);
+                    Background5.SetActive(true);
+                    Debug.Log("4");
+                    break;
+                case 4://go to end?
+                    Scene5.SetActive(false);
+                    Background5.SetActive(false);
+                    //end?
+                    Debug.Log("5");
+                    break;*/
         }
         Action += 1;
     }
