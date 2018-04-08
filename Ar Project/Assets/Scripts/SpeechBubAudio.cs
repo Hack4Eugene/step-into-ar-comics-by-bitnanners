@@ -5,11 +5,15 @@ using UnityEngine;
 [RequireComponent(typeof(AudioSource))]
 public class SpeechBubAudio : MonoBehaviour {
 
-	private AudioSource AudSrc;
+	public AudioSource AudSrc;
 	public List<AudioClip> clips = new List<AudioClip>();
 	public bool rando = true;
-	void Start () {
+
+   public bool ck = false;
+
+	void Awake () {
 		AudSrc = GetComponent<AudioSource>();
+        
 		if(AudSrc != null && clips.Count > 0)
 		{
 
@@ -19,12 +23,25 @@ public class SpeechBubAudio : MonoBehaviour {
 				AudSrc.clip = clips[0];
 			AudSrc.loop = false;
 			AudSrc.spatialBlend = 0;
-			AudSrc.playOnAwake = false;
+			AudSrc.playOnAwake = true;
 		}
-	}
-	
+        ck = true;
 
-	public void playSound()
+    }
+
+    //private void Update()
+    //{
+    //    if(ck)
+    //    {
+    //        if (gameObject.activeSelf)
+    //        {
+    //            playSound();
+    //            ck = false;
+    //        }
+    //    }
+    //}
+
+    public void playSound()
 	{
 		AudSrc.Stop();
 
@@ -32,10 +49,17 @@ public class SpeechBubAudio : MonoBehaviour {
 			AudSrc.clip = clips[Random.Range(0, clips.Count)];
 		else
 			AudSrc.clip = clips[0];
-	}
 
-	private void OnEnable()
+        AudSrc.Play();
+    }
+
+	private void OnBecameVisible()
 	{
 		playSound();
 	}
+
+    private void OnDisable()
+    {
+        ck = true;
+    }
 }
