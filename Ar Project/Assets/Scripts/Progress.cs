@@ -39,6 +39,8 @@ public class Progress : MonoBehaviour {
     public Animator Mario;
     public Animator Deer;
     public Animator Frogger;
+    public Animator Talk;
+    public GameObject Text3;
 
     // Use this for initialization
     void Start () {
@@ -143,36 +145,57 @@ public class Progress : MonoBehaviour {
                 Debug.Log("1");
                 break;*/
             case 1:
-                RocketBeaver.SetTrigger("Next");
+                Talk.SetTrigger("Next");
                 break;
             case 2:
-                RocketBeaver.SetTrigger("Next");
+                Talk.SetTrigger("Next");
                 break;
             case 3:
-                RocketBeaver.SetTrigger("Next");
+                Talk.SetTrigger("Next");
                 break;
             case 4:
+                Talk.SetTrigger("Next");
                 RocketBeaver.SetTrigger("Next");
                 break;
-            case 5://change to mario
+            case 5:
+                Talk.SetTrigger("Next");
+                break;
+            case 6:
+                Talk.SetTrigger("Next");
+                break;
+            case 7:
+                Talk.SetTrigger("Next");
+                RocketBeaver.SetTrigger("Next");
+                break;
+            case 8:
+                RocketBeaver.SetTrigger("Next");
+                break;
+            case 9:
+                Talk.SetTrigger("Next");
+                break;
+            case 10:
+                Talk.SetTrigger("Next");
+                RocketBeaver.SetTrigger("Next");
+                break;
+            case 11://change to mario
                 Scene2.SetActive(false);
                 Background2.SetActive(false);
                 Scene3.SetActive(true);
                 Background3.SetActive(true);
                 Debug.Log("2");
                 break;
-            case 6:
+            case 12:
                 Mario.SetTrigger("Next");
                 Deer.SetTrigger("Next");
                 break;
-            case 7://change to frogger
+            case 13://change to frogger
                 Scene3.SetActive(false);
                 Background3.SetActive(false);
                 Scene4.SetActive(true);
                 Background4.SetActive(true);
                 Debug.Log("3");
                 break;
-            case 8:
+            case 14:
                 Frogger.SetTrigger("Next");
                 break;
                 /*case 3://legend of zelda
