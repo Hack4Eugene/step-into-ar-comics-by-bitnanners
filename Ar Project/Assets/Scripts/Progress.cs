@@ -216,6 +216,24 @@ public class Progress : MonoBehaviour {
             case 20:
                 Frogger.SetTrigger("Next");
                 break;
+            case 21:
+                Frogger.SetTrigger("Next");
+                break;
+            case 22:
+                Frogger.SetTrigger("Next");
+                break;
+            case 23:
+                Frogger.SetTrigger("Next");
+                break;
+            case 24:
+                Frogger.SetTrigger("Next");
+                break;
+            case 25:
+                Frogger.SetTrigger("Next");
+                break;
+            case 26:
+                Frogger.SetTrigger("Next");//going across
+                break;
                 /*case 3://legend of zelda
                     Scene4.SetActive(false);
                     Background4.SetActive(false);
