@@ -204,7 +204,7 @@ public class Progress : MonoBehaviour {
                 DeerTalk.SetTrigger("Next");
                 break;
             case 18:
-                Mario.SetTrigger("Next");
+                DeerTalk.SetTrigger("Next");
                 break;
             case 19://change to frogger
                 Scene3.SetActive(false);
