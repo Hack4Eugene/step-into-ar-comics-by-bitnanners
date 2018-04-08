@@ -5,7 +5,7 @@ using Vuforia;
 
 public class Progress : MonoBehaviour {
 
-    private int Action = 0;
+    private int Action = 1;
 
     public GameObject Cover;
     public GameObject NextButton;
@@ -58,8 +58,8 @@ public class Progress : MonoBehaviour {
                 {
                     change = true;
                     NextButton.SetActive(true);
-                    Scene.SetActive(true);
-                    Background.SetActive(true);
+                    Scene2.SetActive(true);
+                    Background2.SetActive(true);
                 }
                 Debug.Log("You selected the " + hit.transform.name); // ensure you picked right object
             }
@@ -126,15 +126,18 @@ public class Progress : MonoBehaviour {
         switch (Action)
         {
             case 0://change to galaga
-                NextButton.SetActive(false);
+                //NextButton.SetActive(false);
                 Scene.SetActive(false);
                 Background.SetActive(false);
                 Scene2.SetActive(true);
                 Background2.SetActive(true);
-                galaga = true;
+                //galaga = true;
                 Debug.Log("1");
                 break;
-            case 1://change to mario
+            case 1:
+                //animator.SetTrigger("Die");
+                break;
+            /*case 1://change to mario
                 NextButton.SetActive(false);
                 Scene2.SetActive(false);
                 Background2.SetActive(false);
@@ -164,7 +167,7 @@ public class Progress : MonoBehaviour {
                 Background5.SetActive(false);
                 //end?
                 Debug.Log("5");
-                break;
+                break;*/
         }
         Action += 1;
     }
