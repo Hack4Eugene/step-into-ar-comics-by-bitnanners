@@ -203,18 +203,33 @@ public class Progress : MonoBehaviour {
             case 17:
                 DeerTalk.SetTrigger("Next");
                 break;
-            case 18:
-                Mario.SetTrigger("Next");
-                break;
-            case 19://change to frogger
+            case 18://change to frogger
                 Scene3.SetActive(false);
                 Background3.SetActive(false);
                 Scene4.SetActive(true);
                 Background4.SetActive(true);
                 Debug.Log("3");
                 break;
+            case 19:
+                Frogger.SetTrigger("Next");
+                break;
             case 20:
                 Frogger.SetTrigger("Next");
+                break;
+            case 21:
+                Frogger.SetTrigger("Next");
+                break;
+            case 22:
+                Frogger.SetTrigger("Next");
+                break;
+            case 23:
+                Frogger.SetTrigger("Next");
+                break;
+            case 24:
+                Frogger.SetTrigger("Next");
+                break;
+            case 25:
+                Frogger.SetTrigger("Next");//going across
                 break;
                 /*case 3://legend of zelda
                     Scene4.SetActive(false);
