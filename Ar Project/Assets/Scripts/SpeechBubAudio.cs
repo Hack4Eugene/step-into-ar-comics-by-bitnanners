@@ -19,7 +19,7 @@ public class SpeechBubAudio : MonoBehaviour {
 				AudSrc.clip = clips[0];
 			AudSrc.loop = false;
 			AudSrc.spatialBlend = 0;
-
+			AudSrc.playOnAwake = false;
 		}
 	}
 	
