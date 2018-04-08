@@ -27,6 +27,9 @@ public class Progress : MonoBehaviour {
                 if (hit.transform.name == "NextButton")
                 {
                     Next();
+                } else if (hit.transform.name == "Cover Art")
+                {
+                    Change();
                 }
                 Debug.Log("You selected the " + hit.transform.name); // ensure you picked right object
             }
@@ -41,6 +44,9 @@ public class Progress : MonoBehaviour {
                 renderer.material.color = tempColor;
             } else
             {
+                //var renderer = Cover.GetComponent<Renderer>();
+                //renderer.enabled = false;
+                Cover.SetActive(false);
                 change = false;
             }
         }
@@ -52,7 +58,6 @@ public class Progress : MonoBehaviour {
         {
             case 0:
                 Debug.Log("Good");
-                Change();
                 break;
             case 1:
                 Debug.Log("Good1");
