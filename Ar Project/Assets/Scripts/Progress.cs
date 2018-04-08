@@ -1,9 +1,12 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Vuforia;
 
 public class Progress : MonoBehaviour {
+
+    public MusicController music;
 
     private int Action = 1;
 
@@ -43,6 +46,8 @@ public class Progress : MonoBehaviour {
     public Animator DeerTalk;
     public Animator RiverCross;
 
+    public GameObject Explosion;
+
     // Use this for initialization
     void Start () {
 		
@@ -64,6 +69,7 @@ public class Progress : MonoBehaviour {
                 }
                 else if (Name == "Cover Art")
                 {
+                    music.PlaySound(0);
                     change = true;
                     NextButton.SetActive(true);
                     Scene2.SetActive(true);
@@ -189,8 +195,10 @@ public class Progress : MonoBehaviour {
                 Debug.Log("2");
                 break;
             case 13:
+                music.PlaySound(4);
                 Mario.SetTrigger("Next");
                 Deer.SetTrigger("Next");
+                Invoke("deerSplosion", 0.7f);
                 break;
             case 14:
                 DeerTalk.SetTrigger("Next");
@@ -247,6 +255,13 @@ public class Progress : MonoBehaviour {
                     break;*/
         }
         Action += 1;
+    }
+
+    void deerSplosion()
+    {
+        Explosion.SetActive(true);
+        music.PlaySound(3);
+        music.PlaySound(4);
     }
 
 }
