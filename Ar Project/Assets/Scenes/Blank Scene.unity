@@ -131,7 +131,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4010664171558246, guid: a5de36b703cf21742b31cf9e1c5ee807, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.001
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 4010664171558246, guid: a5de36b703cf21742b31cf9e1c5ee807, type: 2}
       propertyPath: m_LocalPosition.z
@@ -169,6 +169,11 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.18093741
       objectReference: {fileID: 0}
+    - target: {fileID: 23055738333523006, guid: a5de36b703cf21742b31cf9e1c5ee807,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 496e4c7a878f3f0498341b8731a7b02e, type: 2}
     m_RemovedComponents:
     - {fileID: 95461848890102538, guid: a5de36b703cf21742b31cf9e1c5ee807, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: a5de36b703cf21742b31cf9e1c5ee807, type: 2}
@@ -1247,6 +1252,7 @@ MonoBehaviour:
   RocketBeaver: {fileID: 1823846685}
   Mario: {fileID: 1672633474}
   Deer: {fileID: 947803639}
+  Frogger: {fileID: 133329102}
 --- !u!1001 &594358349
 Prefab:
   m_ObjectHideFlags: 0
@@ -1749,7 +1755,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &879346572
 Transform:
   m_ObjectHideFlags: 0
@@ -2629,7 +2635,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1481184170
 Transform:
   m_ObjectHideFlags: 0
@@ -2694,7 +2700,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &1556706810
 BoxCollider:
   m_ObjectHideFlags: 0
