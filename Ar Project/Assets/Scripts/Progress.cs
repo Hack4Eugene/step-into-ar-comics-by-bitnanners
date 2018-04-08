@@ -45,6 +45,7 @@ public class Progress : MonoBehaviour {
     public Animator Talk;
     public Animator DeerTalk;
     public Animator RiverCross;
+    public Animator Chest;
 
     public GameObject Explosion;
 
@@ -258,14 +259,18 @@ public class Progress : MonoBehaviour {
             case 31:
                 RiverCross.SetTrigger("Next");
                 break;
-                /*case 3://legend of zelda
-                    Scene4.SetActive(false);
-                    Background4.SetActive(false);
-                    Scene5.SetActive(true);
-                    Background5.SetActive(true);
-                    Debug.Log("4");
-                    break;
-                case 4://go to end?
+            case 32://legend of zelda
+                Scene4.SetActive(false);
+                Background4.SetActive(false);
+                Scene5.SetActive(true);
+                Background5.SetActive(true);
+                Debug.Log("4");
+                break;
+            case 33:
+                Chest.SetTrigger("Next");
+                music.PlaySound(1);
+                break;
+                /*case 4://go to end?
                     Scene5.SetActive(false);
                     Background5.SetActive(false);
                     //end?
