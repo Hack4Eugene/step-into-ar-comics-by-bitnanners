@@ -38,6 +38,7 @@ public class Progress : MonoBehaviour {
     public Animator RocketBeaver;
     public Animator Mario;
     public Animator Deer;
+    public Animator Frogger;
 
     // Use this for initialization
     void Start () {
@@ -164,14 +165,17 @@ public class Progress : MonoBehaviour {
                 Mario.SetTrigger("Next");
                 Deer.SetTrigger("Next");
                 break;
-            case 9://change to legend of zelda
+            case 7://change to frogger
                 Scene3.SetActive(false);
                 Background3.SetActive(false);
                 Scene4.SetActive(true);
                 Background4.SetActive(true);
                 Debug.Log("3");
                 break;
-                /*case 3://change to frogger
+            case 8:
+                Frogger.SetTrigger("Next");
+                break;
+                /*case 3://legend of zelda
                     Scene4.SetActive(false);
                     Background4.SetActive(false);
                     Scene5.SetActive(true);
