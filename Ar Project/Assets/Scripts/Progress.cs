@@ -41,6 +41,7 @@ public class Progress : MonoBehaviour {
     public Animator Frogger;
     public Animator Talk;
     public Animator DeerTalk;
+    public Animator RiverCross;
 
     // Use this for initialization
     void Start () {
@@ -229,7 +230,7 @@ public class Progress : MonoBehaviour {
                 Frogger.SetTrigger("Next");
                 break;
             case 25:
-                Frogger.SetTrigger("Next");//going across
+                RiverCross.SetTrigger("Next");
                 break;
                 /*case 3://legend of zelda
                     Scene4.SetActive(false);
